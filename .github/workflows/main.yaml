@@ -3,8 +3,8 @@ name: Dynamic Feature Testing & Master Deploy
 on:
   push:
     branches:
-      - 'master'
-      - 'Feature*' # Triggers on any branch starting with Feature
+      - "master"
+      - "devlop"
 
 jobs:
   test-logic:
@@ -16,8 +16,8 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-          cache: 'pip'
+          python-version: "3.11"
+          cache: "pip"
 
       - name: Install dependencies
         run: |
@@ -29,7 +29,7 @@ jobs:
         run: |
           # Extract branch name (e.g., Feature1)
           BRANCH_NAME=$(echo ${GITHUB_REF#refs/heads/})
-          
+
           # Run the specific test file: test-{branchname}.py
           echo "Running tests for branch: $BRANCH_NAME"
           pytest "test/test-$BRANCH_NAME.py" > test_results.txt
