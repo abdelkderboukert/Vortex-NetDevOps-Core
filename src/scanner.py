@@ -48,8 +48,8 @@ class ProScanner:
 
     def send_notification(self, device, father_ip, ssh_output):
         print(f"\n{'='*50}")
-        print(f"🛑 CRITICAL FAILURE: {device['name']}")
-        print(f"📍 IP: {device['ip']} | MAC: {device['mac']}")
-        print(f"🔗 LAST REACHABLE HOP: {father_ip}")
-        print(f"📋 FATHER PORT STATUS:\n{ssh_output}")
+        print(f"CRITICAL FAILURE: {device['name']}")
+        print(f"IP: {device['ip']} | MAC: {device['mac']}")
+        print(f"LAST REACHABLE HOP: {father_ip}")
+        print(f"FATHER PORT STATUS:\n{ssh_output}")
         print(f"{'='*50}\n")
