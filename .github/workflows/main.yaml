@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - 'master'
-      - 'Feature*' # Triggers on any branch starting with Feature
+      - 'devlop' # Triggers on any branch starting with Feature
 
 jobs:
   test-logic:
